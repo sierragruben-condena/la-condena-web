@@ -1,0 +1,979 @@
+/* ==================================================
+   CONFIGURACIÓN GENERAL
+   ================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f4efe3;
+    color: #26351f;
+}
+
+
+/* ==================================================
+   MENÚ
+   ================================================== */
+
+.menu {
+    height: 80px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #f4efe3;
+
+    border-bottom: 1px solid #d8d0bf;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* Nombre de la marca */
+
+.nombre-menu {
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+/* Navegación */
+
+nav {
+    display: flex;
+
+    gap: 35px;
+}
+
+nav a {
+    color: #26351f;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.55;
+}
+
+
+/* ==================================================
+   PORTADA
+   ================================================== */
+
+.portada {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f4efe3;
+}
+
+.portada-imagen {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Caja de texto */
+
+.portada-texto {
+    position: absolute;
+
+    right: 8%;
+    bottom: 17%;
+
+    width: 380px;
+
+    padding: 35px 38px;
+
+    text-align: left;
+
+    background: rgba(244, 239, 227, 0.94);
+
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Nombre */
+
+.portada-texto h1 {
+    margin: 0 0 15px;
+
+    color: #26351f;
+
+    font-size: 42px;
+
+    letter-spacing: 5px;
+
+    line-height: 1.05;
+}
+
+
+/* Eslogan */
+
+.portada-texto p {
+    margin: 0 0 30px;
+
+    color: #26351f;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    line-height: 1.4;
+}
+
+
+/* Botón */
+
+.portada-texto .boton {
+    background-color: #26351f;
+
+    color: #f4efe3;
+}
+
+.portada-texto .boton:hover {
+    background-color: #536747;
+}
+
+
+/* Eslogan */
+
+.portada-texto p {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: 25px;
+
+    font-style: italic;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ==================================================
+   BOTONES
+   ================================================== */
+
+.boton {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #26351f;
+
+    color: #f4efe3;
+
+    text-decoration: none;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #536747;
+}
+
+
+/* ==================================================
+   SECCIONES
+   ================================================== */
+
+.seccion {
+    padding: 120px 10%;
+
+    text-align: center;
+
+    border-top: 1px solid #d8d0bf;
+}
+
+
+/* Etiquetas pequeñas */
+
+.etiqueta {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+
+/* Títulos */
+
+h2 {
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin: 0 auto 35px;
+}
+
+
+/* Texto de las secciones */
+
+.seccion > p:not(.etiqueta) {
+    max-width: 700px;
+
+    margin: 15px auto;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   SECCIÓN EL ACEITE
+   ================================================== */
+
+.aceite {
+    background-color: #e8e1d2;
+}
+
+
+/* Tres características */
+
+.caracteristicas {
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+}
+
+
+/* Título de cada característica */
+
+.caracteristica h3 {
+    font-size: 20px;
+
+    font-weight: normal;
+}
+
+
+/* Texto */
+
+.caracteristica p {
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   SECCIÓN COMPRA
+   ================================================== */
+
+.comprar {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+/* Título y etiqueta ocupan todo el ancho */
+
+.comprar .etiqueta,
+.comprar h2 {
+    width: 100%;
+}
+
+
+/* Tarjeta de producto */
+
+.producto {
+    width: 330px;
+
+    padding: 40px 30px;
+
+    background-color: #f4efe3;
+
+    border: 1px solid #d8d0bf;
+}
+
+
+/* Nombre del producto */
+
+.producto h3 {
+    font-size: 23px;
+
+    font-weight: normal;
+}
+
+
+/* Precio */
+
+.precio {
+    font-size: 38px;
+
+    margin: 20px 0;
+}
+
+
+/* ==================================================
+   CONTACTO
+   ================================================== */
+
+.contacto {
+    padding: 60px 8%;
+    background-color: #23351f;
+    color: #f4efe3;
+}
+
+.contacto-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacto .etiqueta {
+    color: #f4efe3;
+    margin-bottom: 25px;
+}
+
+.contacto h2 {
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0 0 35px;
+    color: #f4efe3;
+}
+
+.contacto-texto {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.contacto-datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contacto-item {
+    padding: 35px 30px;
+    border: 1px solid rgba(244, 239, 227, 0.4);
+}
+
+.contacto-item h3 {
+    font-size: 25px;
+    margin: 0 0 15px;
+    font-weight: 400;
+}
+
+.contacto-item p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contacto .boton {
+    display: inline-block;
+    background-color: #f4efe3;
+    color: #23351f;
+    padding: 16px 28px;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contacto .boton:hover {
+    background-color: #ffffff;
+}
+
+.contacto-final {
+    margin-top: 55px;
+    font-size: 22px;
+    font-style: italic;
+}
+
+
+/* ==================================================
+   PIE DE PÁGINA
+   ================================================== */
+
+footer {
+    padding: 35px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    background-color: #1d2818;
+
+    color: #d8d0bf;
+}
+
+/* ==================================================
+   NUESTRA HISTORIA
+   ================================================== */
+
+.historia {
+    padding: 100px 8%;
+    background-color: #f4efe3;
+}
+
+.historia-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.historia-texto {
+    text-align: left;
+}
+
+.historia h2 {
+    font-size: 54px;
+    margin: 0 0 40px;
+}
+
+.historia-destacada {
+    font-size: 24px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 35px !important;
+}
+
+.historia-texto p:not(.etiqueta):not(.historia-destacada):not(.historia-final) {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.historia-final {
+    margin-top: 45px !important;
+    font-size: 23px !important;
+    font-style: italic;
+}
+
+.historia-imagen {
+    width: 100%;
+}
+
+.historia-imagen img {
+    display: block;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+}
+
+/* ==================================================
+   EL ACEITE
+   ================================================== */
+
+.aceite {
+    padding: 120px 8%;
+    background-color: #ffffff;
+}
+
+.aceite-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+/* ---------- IMAGEN ---------- */
+
+.aceite-imagen {
+    width: 100%;
+}
+
+.aceite-imagen img {
+    display: block;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    object-position: 58% center;
+}
+
+/* ---------- TEXTO ---------- */
+
+.aceite-texto {
+    max-width: 520px;
+}
+
+.aceite-texto h2 {
+    font-size: 54px;
+
+    margin: 0 0 35px;
+}
+
+.aceite-destacada {
+    font-size: 24px !important;
+    line-height: 1.6 !important;
+
+    margin-bottom: 30px !important;
+}
+
+.aceite-texto p:not(.etiqueta):not(.aceite-destacada) {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+/* ---------- DATOS DEL ACEITE ---------- */
+
+.aceite-datos {
+    display: flex;
+
+    gap: 45px;
+
+    margin: 45px 0;
+}
+
+.aceite-datos div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.aceite-datos strong {
+    font-size: 22px;
+
+    color: #24351f;
+}
+
+.aceite-datos span {
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+/* ---------- BOTÓN ---------- */
+
+.aceite .boton {
+    display: inline-block;
+
+    padding: 16px 28px;
+
+    background-color: #24351f;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.aceite .boton:hover {
+    background-color: #172516;
+}
+
+/* ==================================================
+   COMPRAR
+   ================================================== */
+
+.comprar {
+    padding: 60px 8% 110px;
+
+    background-color: #f4efe3;
+}
+
+.comprar-cabecera {
+    max-width: 800px;
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+}
+
+.comprar-cabecera h2 {
+    font-size: 45px;
+    line-height: 1.15;
+    margin: 0 0 22px;
+}
+
+.comprar-cabecera > p:last-child {
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+/* ---------- PRODUCTOS ---------- */
+
+.productos {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+.producto {
+    padding: 45px 45px;
+    background-color: #ffffff;
+    border: 1px solid #ddd6c8;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ---------- PRODUCTO DESTACADO ---------- */
+
+.producto-destacado {
+    border: 2px solid #24351f;
+}
+
+
+/* ---------- TEXTO PRODUCTO ---------- */
+
+.producto-tipo {
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+.producto h3 {
+    margin: 0 0 25px;
+
+    font-size: 32px;
+}
+
+
+.producto-descripcion {
+    max-width: 400px;
+
+    margin: 0 auto 30px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.producto-precio {
+    margin: 25px 0 5px;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #24351f;
+}
+
+
+.producto-iva {
+    margin-bottom: 30px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ---------- BOTÓN ---------- */
+
+.producto .boton {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #24351f;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.producto .boton:hover {
+    background-color: #172516;
+}
+
+/* ==================================================
+   AJUSTE DE ANCLAJES DEL MENÚ
+   ================================================== */
+
+section {
+    scroll-margin-top: 79px;
+}
+
+/* ==================================================
+   ADAPTACIÓN PARA MÓVILES
+   ================================================== */
+
+@media (max-width: 768px) {
+
+    /* Menú */
+.menu {
+    height: auto;
+    min-height: 80px;
+    padding: 18px 15px;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nombre-menu {
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+nav a {
+    font-size: 13px;
+}
+
+
+    /* Portada */
+
+.portada-texto {
+    position: relative;
+
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background-color: #f4efe3;
+
+    box-shadow: none;
+}
+
+.portada-texto h1 {
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.portada-texto p {
+    font-size: 19px;
+}
+
+    .portada-texto .boton {
+        padding: 11px 20px;
+
+        font-size: 11px;
+    }
+
+
+    /* Títulos */
+
+    h2 {
+        font-size: 32px;
+    }
+
+
+    /* Características */
+
+    .caracteristicas {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    /* Secciones */
+
+    .seccion {
+        padding: 80px 25px;
+    }
+.historia {
+    padding: 70px 25px;
+}
+
+.historia-contenido {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+}
+
+.historia-texto {
+    text-align: center;
+}
+
+.historia h2 {
+    font-size: 38px;
+}
+
+.historia-destacada {
+    font-size: 21px !important;
+}
+
+.historia-imagen img {
+    height: 360px;
+}
+
+.aceite {
+    padding: 80px 25px;
+}
+
+.aceite-contenido {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+}
+
+.aceite-texto {
+    max-width: 100%;
+
+    text-align: center;
+}
+
+.aceite-texto h2 {
+    font-size: 38px;
+}
+
+.aceite-destacada {
+    font-size: 21px !important;
+}
+
+.aceite-datos {
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.aceite-imagen img {
+    height: 360px;
+    object-position: 58% center;
+}
+
+.comprar {
+    padding: 60px 25px 80px;
+}
+
+.comprar-cabecera h2 {
+    font-size: 36px;
+}
+
+.productos {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+}
+
+.producto {
+    padding: 40px 25px;
+}
+
+/* ==================================================
+   CONTACTO - MÓVIL
+   ================================================== */
+
+@media (max-width: 768px) {
+
+    .contacto {
+        padding: 80px 20px;
+    }
+
+    .contacto h2 {
+        font-size: 44px;
+    }
+
+    .contacto-texto {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .contacto-datos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacto-item {
+        padding: 30px 20px;
+    }
+
+    .contacto-final {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+}
+
+}
